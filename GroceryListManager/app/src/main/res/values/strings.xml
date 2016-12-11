@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">GroceryListManager</string>
+    <string name="type_prompt">Choose a Type</string>
+    <string-array name="itemTypes">
+        <item name="type_choose">Choose Item Type</item>
+
+        <item name="type_fruit">Fruit</item>
+
+        <item name="type_vegetable">Vegetable</item>
+
+        <item name="type_meat">Meat</item>
+
+        <item name="type_dairy">Dairy</item>
+
+    </string-array>
+    <string name="title_activity_no_list">NoList</string>
+    <string name="create_list">Create Grocery List</string>
+    <string name="delete_list">delete list</string>
+    <string name="add_item">add item</string>
+    <string name="view_list">view list</string>
+
+</resources>
+
+

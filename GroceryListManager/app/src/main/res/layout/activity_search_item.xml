@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:hint="Enter item to be serached"
+        android:id="@+id/searchItemName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="SEARCH ITEM"
+        android:id="@+id/searchItemButton"
+        android:layout_gravity="center_horizontal"
+        android:layout_below="@+id/searchItemName"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="CREATE ITEM"
+        android:id="@+id/createItemButton"
+        android:focusable="false"
+        android:onClick="handleCreateNewItemClick"
+        android:layout_alignTop="@+id/addItemFromSearch"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="ADD ITEM"
+        android:id="@+id/addItemFromSearch"
+        android:layout_below="@+id/searchItemName"
+        android:layout_alignParentEnd="true"
+        android:onClick="handleAddItemListClick" />
+
+    <ListView
+        android:id="@+id/searchListView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/searchItemButton"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#CCCCCC"
+        android:dividerHeight="1dp"
+        android:paddingLeft="2dp"
+        android:choiceMode="singleChoice"
+        android:listSelector="#D6D6D6">
+    </ListView>
+
+</RelativeLayout>

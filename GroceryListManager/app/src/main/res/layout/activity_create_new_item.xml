@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_item_from_hierarchical_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.gatech.seclass.grocerylistmanager.CreateNewItem"
+    android:onClick="handleAddToDBClick">
+
+    <TextView
+        android:text="Choose Type:"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:id="@+id/justText"
+        android:layout_alignParentTop="true" />
+
+    <Spinner
+        android:id="@+id/itemTypeChoose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@id/justText"
+        >
+
+    </Spinner>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="Name"
+        android:ems="10"
+        android:layout_marginTop="39dp"
+        android:id="@+id/searchItem"
+        android:layout_below="@+id/itemTypeChoose"
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/itemTypeChoose" />
+
+    <Button
+        android:text="Create New Item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/goToAddHierarchicalList"
+        android:layout_below="@+id/searchItem"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="31dp"
+        android:onClick="handleAddToDBClick"/>
+</RelativeLayout>

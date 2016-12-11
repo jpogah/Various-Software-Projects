@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_active_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.gatech.seclass.grocerylistmanager.CurrentList">
+
+    <Button
+        android:text="Switch List"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="12dp"
+        android:layout_marginTop="11dp"
+        android:id="@+id/switchList"
+        android:onClick="goToListCollection" />
+
+    <Button
+        android:text="add item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:id="@+id/addItem"
+        android:onClick="handleAddItemClick"
+        android:layout_below="@+id/currentListName"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:text="edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:id="@+id/editItem"
+        android:onClick="handleEditItemClick"
+        android:layout_above="@+id/groceryItemListHeader"
+        android:layout_toEndOf="@+id/addItem" />
+
+    <Button
+        android:text="delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:id="@+id/deleteItem"
+        android:onClick="handleDeleteItemClick"
+        android:layout_above="@+id/groceryItemListHeader"
+        android:layout_toEndOf="@+id/editItem" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="0dp"
+        android:minWidth="0dp"
+        android:text="CHECKOFF ALL"
+        android:id="@+id/checkOffAll"
+        android:layout_alignParentEnd="true"
+        android:background="#D3D3D3"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:layout_toEndOf="@+id/deleteItem"
+        android:layout_alignTop="@+id/deleteItem"
+        android:onClick="handleCheckOffAllClick" />
+
+    <TextView
+        android:textSize="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/switchList"
+        android:layout_alignStart="@+id/addItem"
+        android:id="@+id/currentListName"
+        android:text="jgh"
+        android:padding="20dp" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="#D3D3D3"
+        android:layout_below="@+id/addItem"
+        android:id="@+id/groceryItemListHeader"
+        android:weightSum="1"
+        >
+
+        <TextView
+            android:id="@+id/itemHeader"
+            android:layout_width="116dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Item"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/quantityHeader"
+            android:layout_width="193dp"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="Quantity"
+            android:gravity="center"
+            android:layout_weight="0.77" />
+
+    </LinearLayout>
+
+
+    <ExpandableListView
+            android:id="@+id/itemType_list"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:visibility="visible"
+            android:layout_below="@+id/groceryItemListHeader"
+            android:transcriptMode="alwaysScroll">
+        </ExpandableListView>
+
+</RelativeLayout>

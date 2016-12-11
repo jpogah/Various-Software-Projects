@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_hierarchical_item_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="edu.gatech.seclass.grocerylistmanager.HierarchicalItemList">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose item type and then item"
+        android:id="@+id/displayText"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:textStyle="bold"
+        android:textSize="15dp" />
+
+    <Spinner
+        android:id="@+id/staticSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/itemTypes"
+        android:prompt="@string/type_prompt"
+        android:layout_below="@+id/displayText"
+        android:layout_alignParentStart="true"
+        android:spinnerMode="dropdown" />
+
+    <Spinner
+        android:id="@+id/itemSpinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/staticSpinner"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Quantity Amount:"
+        android:id="@+id/quantityAmount"
+        android:layout_alignBottom="@+id/quantityAmountValue"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/quantityAmountValue"
+        android:layout_below="@+id/itemSpinner"
+        android:layout_toEndOf="@+id/quantityAmount"
+        android:hint="0.0" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Quantity Unit:"
+        android:id="@+id/quantityUnit"
+        android:layout_alignBottom="@+id/quantityUnitValue"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/quantityAmount"
+        android:gravity="bottom" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/quantityUnitValue"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/quantityAmountValue"
+        android:layout_alignEnd="@+id/quantityAmountValue"
+        android:layout_toEndOf="@+id/quantityUnit"
+        android:layout_below="@+id/quantityAmountValue"
+        android:hint="Please enter the unit"
+        android:gravity="bottom" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save Item"
+        android:id="@+id/saveItemToList"
+        android:layout_marginTop="60dp"
+        android:layout_below="@+id/quantityUnit"
+        android:layout_alignEnd="@+id/quantityUnit" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SEARCH ITEM"
+        android:id="@+id/searchItem"
+        android:layout_alignTop="@+id/saveItemToList"
+        android:layout_toEndOf="@+id/displayText"
+        android:onClick="handleSearchItemClick" />
+</RelativeLayout>

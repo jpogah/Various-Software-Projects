@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="*"
+    >
+    <TableRow>
+        <TextView android:text="@string/check_amount"/>
+        <EditText android:id="@+id/checkAmountValue"
+        android:layout_weight="1"
+        />
+    </TableRow>
+    <TableRow>
+        <TextView android:text="@string/party_size"/>
+        <EditText android:id="@+id/partySizeValue"
+            android:layout_weight="1"
+            />
+    </TableRow>
+    <TableRow>
+        <Button android:id="@+id/buttonCompute"
+            android:text="@string/compute_tip"
+            android:layout_column="1"
+            android:onClick="calculateTip"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView />
+        <TextView
+            android:textSize="18dp"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/general_msg"/>
+
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/tip"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="15%"/>
+        <EditText
+            android:clickable="false"
+            android:linksClickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:id="@+id/fifteenPercentTipValue"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="20%"/>
+        <EditText
+            android:clickable="false"
+            android:linksClickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:id="@+id/twentyPercentTipValue"
+            android:layout_weight="1"
+            android:layout_width="0dp"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="25%"/>
+        <EditText
+            android:clickable="false"
+            android:linksClickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:id="@+id/twentyFivePercentTipValue"
+            android:layout_weight="1"
+            android:layout_width="0dp"/>
+    </TableRow>
+
+    <TableRow>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="@string/total"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="15%"/>
+        <EditText
+            android:clickable="false"
+            android:linksClickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:id="@+id/fifteenPercentTotalValue"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="20%"/>
+        <EditText
+            android:clickable="false"
+            android:linksClickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:id="@+id/twentyPercentTotalValue"
+            android:layout_weight="1"
+            android:layout_width="0dp"/>
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:text="25%"/>
+        <EditText
+            android:clickable="false"
+            android:linksClickable="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:id="@+id/twentyFivePercentTotalValue"
+            android:layout_weight="1"
+            android:layout_width="0dp"/>
+    </TableRow>
+</TableLayout>

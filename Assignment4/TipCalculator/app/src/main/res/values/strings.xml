@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="check_amount">Check amount:</string>
+    <string name="party_size">Party size:</string>
+    <string name="tip">Tip:</string>
+    <string name="compute_tip">COMPUTE TIP</string>
+    <string name="total">Total:</string>
+    <string name="general_msg">Tips and totals(per person)</string>
+</resources>

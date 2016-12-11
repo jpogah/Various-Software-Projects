@@ -1,0 +1,70 @@
+# Opt
+ input flag:
+  none. [single]   
+  one.
+  many.  
+
+# File
+  Size:
+      Empty.		[single][property emptyfile]	
+      Not empty.
+  Number of occurrences of the from in the file:
+      None.			[single][if !emptyfile] [property noOccurences]
+      One.			[if !emptyfile]	
+      Many.			[if !emptyfile]	
+  Number of occurrences of the from in one line:
+      One.		[if !noOccurences && !emptyfile]	
+      Many.		[single][if !noOccurences && !emptyfile]	
+  Position of the from in the file:
+      First line.	[single][if !emptyfile]
+      Last line.	[single][if !emptyfile]	
+      Any.			[if !emptyfile]	
+
+# From
+  Length of the from:
+      Empty.		[single][property emptyfrom]	
+      One.		[single]	
+      More than one.	[property fromlengthgt1]		
+      Longer than the file. [error]	
+  Presence of enclosing quotes:
+      Not enclosed.	[if !emptyfrom]		
+      Enclosed.
+      Incorrect.	[error]	
+  Presence of blanks:
+      None.             [single]
+      One.		[if !emptyfrom]		
+      Many.	[single][if !emptyfrom && fromlengthgt1]			
+  Presence of quotes within the from:
+      None.
+      One.		[if !emptyfrom]		
+      Many.            [single] [if !emptyfrom && fromlengthgt1]
+
+# To
+  Length of the To:
+      Empty.	       [single][if !emptyfrom] [property emptyto]	
+      One.		[single][if !emptyfrom]	
+      More than one.       [property tolengthgt1][if !emptyfrom]			
+      Longer than the file.	[error]
+  Presence of enclosing quotes:
+      Not enclosed.		[if !emptyto && !emptyfrom]		
+      Enclosed.                 [if !emptyfrom]
+      Incorrect.		[error]
+  Presence of blanks:
+      None.             [if !emptyfrom][single]
+      One.		[if !emptyto && !emptyfrom]		
+      Many.		[if !emptyto && tolengthgt1]		
+  Presence of quotes within the To:
+      None.               [if !emptyfrom]
+      One.                [if !emptyto]				
+      Many.              [single] [if !emptyto && tolengthgt1]
+			
+
+# Filename
+  Presence of a file corresponding to the name:
+      Not present.	[error]
+      Present.
+     
+
+  
+
+

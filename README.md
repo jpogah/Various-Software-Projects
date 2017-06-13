@@ -1,1 +1,1 @@
-# This repository consist of several software engineering project using the Java programming language.The project includes, a grocery list manage app ( an android application) , a replace utility ( Java application ) and others.
+This repository consist of several software engineering project using the Java programming language.The project includes, a grocery list manage app ( an android application) , a replace utility ( Java application ) and others.
